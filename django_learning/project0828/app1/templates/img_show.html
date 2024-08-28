@@ -1,0 +1,13 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <img src="/static/img/Nenu.jpg" /> 
+    {% comment %}是在当前app的绝对路径下引用,不能用static/Nenu.jpg, 因为这是相对路径{%endcomment %}
+
+    <img src="{% static 'img/Nenu.jpg' %}" /> 
+    {% comment %}这里使用了“相对路径”,在settings中设置static的路径,便于迁移 {% endcomment %}
+    <div></div>
+  </body>
+</html>
